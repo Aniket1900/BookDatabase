@@ -1,4 +1,4 @@
-% Author: Bartosz Modrzyñski
+% Author: Bartosz Modrzyï¿½ski
 % Date: 2016-04-25
 
 %Baza danych
@@ -10,7 +10,7 @@ go:- dynamic(author/3), dynamic(book/5), dynamic(type/2), program.
 
 
 program :-  new(BDatabase, dialog('Menu')),
-            send(BDatabase, append, text('Baza Danych ksi¹¿ek')),
+            send(BDatabase, append, text('Baza Danych ksiï¿½ï¿½ek')),
             send(BDatabase, append, button('Dodawanie autora',message(@prolog,add_author)),below),
             send(BDatabase, append, button('Dodawanie ksiazki',message(@prolog,add_book)),below),
             send(BDatabase, append, button('Dodanie gatunku',message(@prolog,add_type)),below),
@@ -30,11 +30,11 @@ add_author:-
                                 ]),
                   send(Window,open).
 
-add_new_author:-assert(author(Id_autora,Imie,Nazwisko)).
+add_new_author(Id_autora, Imie, Nazwisko):-assert(author(Id_autora,Imie,Nazwisko)).
 
 %book - id, tytul, autor, rodzaj, indeks
 
-add_book:-
+add_book :-
         new(Window,dialog('Dodawanie autora')),
         send_list(Window,append,[ text('Wpisz imie, nazwisko oraz miasto'),
                   new(Id_ksiazki,text_item('Id ksiazki')),
@@ -45,11 +45,13 @@ add_book:-
                   new(Nazwisko,text_item('Nazwisko autora')),
                   new(Typ, text_item('Rodzaj ksiazki')),
                   new(Indeks, text_item('Indeks')),
-                  button('Dodaj autora',and(message(@prolog,add_new_author,Id_autora?selection, Imie?selection, Nazwisko?selection, Id_ksiazki?selection, Tytul?selection, Typ?selection, Indeks?selection),message(Window,destroy)))
+                  button('Dodaj autora',
+                    and(
+                      message(@prolog,add_new_author,Id_autora?selection, Imie?selection, Nazwisko?selection),
+                      message(@prolog, add_new_book, Id_ksiazki?selection, Tytul?selection, Typ?selection, Indeks?selection),
+                      message(Window,destroy)))
                                 ]),
                   send(Window,open).
 
-add_new_book:-assert(author(Id_autora,Imie,Nazwisko)),assert(book(Id_ksiazki,Tytul,Typ,Indeks)).
-
-
-
+add_new_book(Id_ksiazki, Tytul, Typ, Indeks) :-
+  assert(book(Id_ksiazki,Tytul,Typ,Indeks)).
