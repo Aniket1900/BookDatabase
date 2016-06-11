@@ -1,15 +1,19 @@
-from PyQt5 import QtWidgets, uic
+from PyQt5 import uic
+from PyQt5.QtWidgets import QWidget
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from Models.PrologObjects import Authors
 
 
-class AddAuthorWindow(QtWidgets.QWidget):
+class ListAuthorWindow(QWidget):
     def __init__(self, parent=None):
-        super(AddAuthorWindow, self).__init__(parent=parent)
+        super(ListAuthorWindow, self).__init__(parent=parent)
         self.ui = uic.loadUi('Views/listAuthorUi.ui', self)
-        self.model = QtWidgets.QStandardItemModel(self.ui.authorListView)
+        self.model = QStandardItemModel(self.ui.authorListView)
         self.loadAuthors()
 
     def loadAuthors(self):
         authors = Authors()
         for author in authors:
-            pass
+            item = QStandardItem()
+            item.setText(author.JoinName())
+            self.model.appendRow(item)

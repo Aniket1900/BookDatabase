@@ -13,6 +13,15 @@ class Author(object):
         self.name = name
         self.surname = surname
 
+    def Name(self):
+        return self.name
+
+    def Surname(self):
+        return self.surname
+
+    def JoinName(self):
+        return ' '.join(self.name, self.surname)
+
     def save(self):
         prolog.assertz("author({},{})".format(self.name, self.surname))
         pass
@@ -29,7 +38,7 @@ class Authors(object):
         return self.next()
 
     def next(self):
-        if self.authors.lengt == 0:
+        if len(self.authors) == 0:
             raise StopIteration()
         else:
             return Author(*self.authors.popleft())
