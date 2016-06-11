@@ -8,12 +8,15 @@ class ListAuthorWindow(QWidget):
     def __init__(self, parent=None):
         super(ListAuthorWindow, self).__init__(parent=parent)
         self.ui = uic.loadUi('Views/listAuthorUi.ui', self)
-        self.model = QStandardItemModel(self.ui.authorListView)
         self.loadAuthors()
 
     def loadAuthors(self):
+        model = QStandardItemModel(self.ui.authorListView)
         authors = Authors()
+
         for author in authors:
-            item = QStandardItem()
-            item.setText(author.JoinName())
-            self.model.appendRow(item)
+            item = QStandardItem(author.JoinName())
+            item.setCheckable(True)
+            model.appendRow(item)
+
+        self.ui.authorListView.setModel(model)

@@ -10,7 +10,7 @@ class AddAuthorWindow(QtWidgets.QWidget):
 
     def newAuthor(self):
         name = self.ui.lineEditNameAuthor.text()
-        surname = self.ui.lineEditNameAuthor.text()
+        surname = self.ui.lineEditSurnameAuthor.text()
         author = Author(name, surname)
         author.save()
         self.close()

@@ -9,9 +9,9 @@ class Book(object):
 
 
 class Author(object):
-    def __init__(self, name, surname):
-        self.name = name
-        self.surname = surname
+    def __init__(self, X, Y):
+        self.name = X
+        self.surname = Y
 
     def Name(self):
         return self.name
@@ -20,9 +20,10 @@ class Author(object):
         return self.surname
 
     def JoinName(self):
-        return ' '.join(self.name, self.surname)
+        return ' '.join([self.name, self.surname])
 
     def save(self):
+        print(self.name, ' ', self.surname)
         prolog.assertz("author({},{})".format(self.name, self.surname))
         pass
 
@@ -41,4 +42,5 @@ class Authors(object):
         if len(self.authors) == 0:
             raise StopIteration()
         else:
-            return Author(*self.authors.popleft())
+            print(self.authors[0])
+            return Author(**self.authors.pop(0))
