@@ -4,10 +4,10 @@ from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from Models.PrologObjects import Authors
 
 
-class ListAuthorWindow(QWidget):
+class AddBookWindow(QWidget):
     def __init__(self, parent=None):
-        super(ListAuthorWindow, self).__init__(parent=parent)
-        self.ui = uic.loadUi('Views/listAuthorUi.ui', self)
+        super(AddBookWindow, self).__init__(parent=parent)
+        self.ui = uic.loadUi('Views/addBookUi.ui', self)
         self.loadAuthors()
 
     def loadAuthors(self):
