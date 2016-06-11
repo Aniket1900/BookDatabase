@@ -23,7 +23,6 @@ class Author(object):
         return ' '.join([self.name, self.surname])
 
     def save(self):
-        print(self.name, ' ', self.surname)
         prolog.assertz("author({},{})".format(self.name, self.surname))
         pass
 
@@ -42,5 +41,4 @@ class Authors(object):
         if len(self.authors) == 0:
             raise StopIteration()
         else:
-            print(self.authors[0])
             return Author(**self.authors.pop(0))
