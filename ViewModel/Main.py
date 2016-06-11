@@ -1,6 +1,6 @@
-from PyQt5 import QtCore, QtWidgets, uic
-
+from PyQt5 import QtWidgets, uic
 from .AddAuthor import AddAuthorWindow
+
 
 class MainWindow(QtWidgets.QWidget):
     def __init__(self, parent=None):
