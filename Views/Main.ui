@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>335</width>
-    <height>148</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -36,9 +36,30 @@
     </widget>
    </item>
    <item>
+    <widget class="QPushButton" name="authorListButton">
+     <property name="text">
+      <string>Lista autorów</string>
+     </property>
+    </widget>
+   </item>
+   <item>
     <widget class="QPushButton" name="bookListButton">
      <property name="text">
       <string>Lista książek</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Podobne książki</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Podobni autorzy</string>
      </property>
     </widget>
    </item>
