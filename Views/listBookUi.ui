@@ -23,10 +23,23 @@
     </rect>
    </property>
    <property name="text">
-    <string>Autorzy</string>
+    <string>Książki</string>
    </property>
   </widget>
-  <widget class="QListView" name="authorListView">
+  <widget class="QPushButton" name="pushButton">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>250</y>
+     <width>120</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Podobne książki</string>
+   </property>
+  </widget>
+  <widget class="QListView" name="listView">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -34,19 +47,6 @@
      <width>360</width>
      <height>200</height>
     </rect>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="pushButton">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>250</y>
-     <width>120</width>
-     <height>25</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Podobni autorzy</string>
    </property>
   </widget>
  </widget>
