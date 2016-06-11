@@ -1,18 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>Form</class>
- <widget class="QWidget" name="Form">
+ <class>mainUi</class>
+ <widget class="QWidget" name="mainUi">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>335</width>
+    <height>148</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>BookDatabase</string>
   </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="addAuthorButton">
+     <property name="text">
+      <string>Dodaj autora</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addCategoryButton">
+     <property name="text">
+      <string>Dodaj kategorie</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addBookButton">
+     <property name="text">
+      <string>Dodaj książkę</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="bookListButton">
+     <property name="text">
+      <string>Lista książek</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
