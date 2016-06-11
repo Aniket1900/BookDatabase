@@ -1,6 +1,6 @@
-from pyswip import prolog as Prolog
+from pyswip import Prolog
 
-prolog = Prolog.Prolog()
+prolog = Prolog()
 
 
 class Book():
@@ -14,5 +14,5 @@ class Author():
         self.surname = surname
         prolog.assertz("author({},{})".format(name, surname))
 
-    def save(self, file):
+    def save(self):
         pass

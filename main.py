@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets
 import sys
-from .ViewModel.Main import MainWindow
+from ViewModel.Main import MainWindow
 
 
 class BookDatabase(QtWidgets.QApplication):
