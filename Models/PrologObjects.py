@@ -50,3 +50,33 @@ class Authors(object):
             raise StopIteration()
         else:
             return Author(**self.authors.pop(0))
+
+class Genre(object):
+    def __init__(self, Name):
+        self.name = unwarp(Name)
+
+    def Name(self):
+        return self.name
+
+    def JoinName(self):
+        return ' '.join([self.name])
+
+    def save(self):
+        prolog.assertz("genre({},{})".format(warp(self.name)))
+
+
+class Genres(object):
+    def __init__(self):
+        self.genres = list(prolog.query("genre(Name)"))
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return self.next()
+
+    def next(self):
+        if len(self.genres) == 0:
+            raise StopIteration()
+        else:
+            return Genre(**self.genres.pop(0))
