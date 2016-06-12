@@ -8,9 +8,9 @@ class ListGenreWindow(QWidget):
     def __init__(self, parent=None):
         super(ListGenreWindow, self).__init__(parent=parent)
         self.ui = uic.loadUi('Views/listGenreUi.ui', self)
-        self.loadAuthors()
+        self.loadGenres()
 
-    def loadAuthors(self):
+    def loadGenres(self):
         model = QStandardItemModel(self.ui.genreListView)
         genres = Genres()
 
