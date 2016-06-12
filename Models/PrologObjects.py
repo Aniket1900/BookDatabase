@@ -58,9 +58,6 @@ class Genre(object):
     def Name(self):
         return self.name
 
-    def JoinName(self):
-        return ' '.join([self.name])
-
     def save(self):
         prolog.assertz("genre({},{})".format(warp(self.name)))
 
