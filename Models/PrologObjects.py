@@ -15,6 +15,22 @@ class Book(object):
     def __init__(self, Name):
         self.name = Name
 
+class Books(object):
+    def __init__(self):
+        self.books = list(prolog.query("book(Name)"))
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        return self.next()
+
+    def next(self):
+        if len(self.books) == 0:
+            raise StopIteration()
+        else:
+            return Book(**self.books.pop(0))
+
 
 class Author(object):
     def __init__(self, Name, Surname):
