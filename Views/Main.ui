@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>335</width>
-    <height>250</height>
+    <height>300</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,6 +39,13 @@
     <widget class="QPushButton" name="authorListButton">
      <property name="text">
       <string>Lista autorów</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Lista gatunków</string>
      </property>
     </widget>
    </item>
