@@ -8,7 +8,7 @@ class AddGenreWindow(QtWidgets.QWidget):
         self.ui = uic.loadUi('Views/addGenreUi.ui', self)
         self.ui.addGenreButton.clicked.connect(self.newGenre)
 
-    def newAuthor(self):
+    def newGenre(self):
         name = self.ui.lineEditNameGenre.text()
         genre = Genre(name)
         genre.save()

@@ -59,7 +59,7 @@ class Genre(object):
         return self.name
 
     def save(self):
-        prolog.assertz("genre({},{})".format(warp(self.name)))
+        prolog.assertz("genre({})".format(warp(self.name)))
 
 
 class Genres(object):

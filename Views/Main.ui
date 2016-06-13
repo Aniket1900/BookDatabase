@@ -22,7 +22,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="addCategoryButton">
+    <widget class="QPushButton" name="addGenreButton">
      <property name="text">
       <string>Dodaj kategorie</string>
      </property>
@@ -53,13 +53,6 @@
     <widget class="QPushButton" name="pushButton">
      <property name="text">
       <string>Podobne książki</string>
-     </property>
-    </widget>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton_2">
-     <property name="text">
-      <string>Podobni autorzy</string>
      </property>
     </widget>
    </item>

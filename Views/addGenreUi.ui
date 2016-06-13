@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dodaj książkę</string>
   </property>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEditNameGenre">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -36,7 +36,7 @@
     <string>Nazwa gatunku</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="addGenreButton">
    <property name="geometry">
     <rect>
      <x>20</x>
