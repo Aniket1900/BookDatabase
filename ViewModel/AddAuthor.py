@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets, uic
-from Models.PrologObjects import Author
+from Models.Author import Author
 
 
 class AddAuthorWindow(QtWidgets.QWidget):

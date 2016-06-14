@@ -1,7 +1,7 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
-from Models.PrologObjects import Authors
+from Models.Authors import Authors
 
 
 class ListAuthorWindow(QWidget):

@@ -1,10 +1,10 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget
-from PyQt5.QtGui import QStandardItemModel
-from Models.PrologObjects import Books
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
+from Models.Books import Books
 
 
-class ListGenreWindow(QWidget):
+class ListBookWindow(QWidget):
     def __init__(self, parent=None):
         super(ListBookWindow, self).__init__(parent=parent)
         self.ui = uic.loadUi('Views/listBookUi.ui', self)
@@ -15,7 +15,8 @@ class ListGenreWindow(QWidget):
         books = Books()
 
         for book in books:
+            item = QStandardItem(book.Title())
             book.setCheckable(True)
-            model.appendRow(genre)
+            model.appendRow(item)
 
         self.ui.bookListView.setModel(model)

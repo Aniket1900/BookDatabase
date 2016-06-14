@@ -1,9 +1,6 @@
 from PyQt5 import QtWidgets, uic
-from .AddAuthor import AddAuthorWindow
-from .AddBook import AddBookWindow
-from .ListAuthor import ListAuthorWindow
-from .ListGenre import ListGenreWindow
-from .AddGenre import AddGenreWindow
+from . import AddAuthor, AddBook, AddGenre, \
+    ListGenre, ListAuthor
 
 
 class MainWindow(QtWidgets.QWidget):
@@ -18,21 +15,21 @@ class MainWindow(QtWidgets.QWidget):
         self.ui.addGenreButton.clicked.connect(self.addGenre)
 
     def addAuthor(self):
-        authorWindow = AddAuthorWindow()
+        authorWindow = AddAuthor.AddAuthorWindow()
         authorWindow.show()
 
     def listAuthor(self):
-        listWindow = ListAuthorWindow()
+        listWindow = ListAuthor.ListAuthorWindow()
         listWindow.show()
 
     def listGenre(self):
-        listWindow = ListGenreWindow()
+        listWindow = ListGenre.ListGenreWindow()
         listWindow.show()
 
     def addBook(self):
-        bookWindow = AddBookWindow()
+        bookWindow = AddBook.AddBookWindow()
         bookWindow.show()
 
     def addGenre(self):
-        genreWindow = AddGenreWindow()
+        genreWindow = AddGenre.AddGenreWindow()
         genreWindow.show()

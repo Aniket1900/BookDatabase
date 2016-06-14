@@ -1,5 +1,5 @@
 from PyQt5 import QtWidgets, uic
-from Models.PrologObjects import Genre
+from Models.Genre import Genre
 
 
 class AddGenreWindow(QtWidgets.QWidget):
