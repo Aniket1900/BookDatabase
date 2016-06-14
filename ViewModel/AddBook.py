@@ -42,13 +42,13 @@ class AddBookWindow(QWidget):
         authors = []
         genres = []
 
-        for i in range(0, self.authorModel.rowCount()-1):
+        for i in range(0, self.authorModel.rowCount()):
             item = self.authorModel.item(i)
             if item.checkState():
                 authors.append(Author(*item.text().split(" ")))
 
-        for i in range(0, self.genreModel.rowCount()-1):
-            item = self.authorModel.item(i)
+        for i in range(0, self.genreModel.rowCount()):
+            item = self.genreModel.item(i)
             if item.checkState():
                 genres.append(Genre(item.text()))
 

@@ -16,12 +16,14 @@ class Book(object):
         return self.year
 
     def save(self):
-        prolog.assertz("book({},{}, {})".
+        prolog.assertz("book({},{},{})".
                        format(warp(self.title), self.year, self.mark))
         for genre in self.genres:
+            print("Add genre")
             prolog.assertz("genre({},{})".format(warp(genre.Name()),
-                                                 self.Title()))
+                                                 warp(self.Title())))
         for author in self.author:
-            prolog.assertz("author({},{}, {})".
-                           format(warp(author.Name()), author.Surname(),
-                                  warp(author.Title())))
+            print("Add author")
+            prolog.assertz("author({},{},{})".
+                           format(warp(author.Name()), warp(author.Surname()),
+                                  warp(self.Title())))

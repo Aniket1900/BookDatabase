@@ -8,7 +8,7 @@ class ListBookWindow(QWidget):
     def __init__(self, parent=None):
         super(ListBookWindow, self).__init__(parent=parent)
         self.ui = uic.loadUi('Views/listBookUi.ui', self)
-        self.loadGenres()
+        self.loadBooks()
 
     def loadBooks(self):
         model = QStandardItemModel(self.ui.bookListView)
@@ -16,7 +16,7 @@ class ListBookWindow(QWidget):
 
         for book in books:
             item = QStandardItem(book.Title())
-            book.setCheckable(True)
+            item.setCheckable(True)
             model.appendRow(item)
 
         self.ui.bookListView.setModel(model)

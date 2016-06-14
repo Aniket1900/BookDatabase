@@ -1,6 +1,6 @@
 from PyQt5 import QtWidgets, uic
 from . import AddAuthor, AddBook, AddGenre, \
-    ListGenre, ListAuthor
+    ListGenre, ListAuthor, ListBook
 
 
 class MainWindow(QtWidgets.QWidget):
@@ -10,13 +10,22 @@ class MainWindow(QtWidgets.QWidget):
 
         self.ui.addAuthorButton.clicked.connect(self.addAuthor)
         self.ui.addBookButton.clicked.connect(self.addBook)
+        self.ui.addGenreButton.clicked.connect(self.addGenre)
         self.ui.authorListButton.clicked.connect(self.listAuthor)
         self.ui.genreListButton.clicked.connect(self.listGenre)
-        self.ui.addGenreButton.clicked.connect(self.addGenre)
+        self.ui.bookListButton.clicked.connect(self.listBook)
 
     def addAuthor(self):
         authorWindow = AddAuthor.AddAuthorWindow()
         authorWindow.show()
+
+    def addBook(self):
+        bookWindow = AddBook.AddBookWindow()
+        bookWindow.show()
+
+    def addGenre(self):
+        genreWindow = AddGenre.AddGenreWindow()
+        genreWindow.show()
 
     def listAuthor(self):
         listWindow = ListAuthor.ListAuthorWindow()
@@ -26,10 +35,6 @@ class MainWindow(QtWidgets.QWidget):
         listWindow = ListGenre.ListGenreWindow()
         listWindow.show()
 
-    def addBook(self):
-        bookWindow = AddBook.AddBookWindow()
-        bookWindow.show()
-
-    def addGenre(self):
-        genreWindow = AddGenre.AddGenreWindow()
-        genreWindow.show()
+    def listBook(self):
+        listWindow = ListBook.ListBookWindow()
+        listWindow.show()
