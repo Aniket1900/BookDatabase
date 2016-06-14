@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>listGenreUi</class>
- <widget class="QWidget" name="listGenreUi">
+ <class>resultForm</class>
+ <widget class="QWidget" name="resultForm">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -11,13 +11,13 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Lista gatunków</string>
+   <string>Rezultat wyszukiwania</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
      <property name="text">
-      <string>Gatunek</string>
+      <string>Wyszukane książki</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -25,17 +25,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QListView" name="genreListView"/>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="text">
-      <string>Książki danego gatunku</string>
-     </property>
-    </widget>
+    <widget class="QListView" name="listView"/>
    </item>
   </layout>
  </widget>

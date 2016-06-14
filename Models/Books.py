@@ -5,8 +5,15 @@ from .Genre import Genre
 
 
 class Books(object):
-    def __init__(self):
-        self.books = list(prolog.query("book(Title, Year, Mark)"))
+    def __init__(self, searchType=None, objectFilter=None):
+        if searchType is None:
+            self.books = list(prolog.query("book(Title, Year, Mark)"))
+        else:
+            if searchType == 1:
+                self.books = list(prolog.
+                                  query("author({}, {}, Title, Year, Rank)".
+                                        format(warp(objectFilter.Name()),
+                                               warp(objectFilter.Surname()))))
 
     def __iter__(self):
         return self
