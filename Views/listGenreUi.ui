@@ -19,6 +19,9 @@
      <property name="text">
       <string>Gatunek</string>
      </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
     </widget>
    </item>
    <item>
@@ -27,7 +30,7 @@
    <item>
     <widget class="QPushButton" name="pushButton">
      <property name="text">
-      <string>Podobne Gatunki</string>
+      <string>Książki danego gatunku</string>
      </property>
     </widget>
    </item>
