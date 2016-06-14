@@ -18,14 +18,16 @@ class Books(object):
         if len(self.books) == 0:
             raise StopIteration()
         else:
-            authorsList = list(prolog.query("author(Name, Surname, {})".
-                                            format(warp(self.books[0]["Title"]))))
+            authorsList = list(
+                prolog.query("author(Name, Surname, {})".
+                             format(warp(self.books[0]["Title"]))))
             authors = []
             for authorEntry in authorsList:
                 authors.append(Author(**authorEntry))
 
-            genreList = list(prolog.query("genre(Name, {})".
-                                          format(warp(self.books[0]["Title"]))))
+            genreList = list(
+                prolog.query("genre(Name, {})".
+                             format(warp(self.books[0]["Title"]))))
             genres = []
             for genreEntry in genreList:
                 genres.append(Genre(**genreEntry))
