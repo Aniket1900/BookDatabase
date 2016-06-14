@@ -7,48 +7,31 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>150</height>
+    <height>110</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dodaj książkę</string>
   </property>
-  <widget class="QLineEdit" name="lineEditNameGenre">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>40</y>
-     <width>360</width>
-     <height>25</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_2">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>20</y>
-     <width>100</width>
-     <height>20</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Nazwa gatunku</string>
-   </property>
-  </widget>
-  <widget class="QPushButton" name="addGenreButton">
-   <property name="geometry">
-    <rect>
-     <x>20</x>
-     <y>100</y>
-     <width>360</width>
-     <height>30</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string>Dodaj Gatunek</string>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Nazwa gatunku</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditNameGenre"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addGenreButton">
+     <property name="text">
+      <string>Dodaj Gatunek</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>

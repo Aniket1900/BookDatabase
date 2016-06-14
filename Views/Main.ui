@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>335</width>
-    <height>300</height>
+    <height>250</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -24,7 +24,7 @@
    <item>
     <widget class="QPushButton" name="addGenreButton">
      <property name="text">
-      <string>Dodaj kategorie</string>
+      <string>Dodaj gatunek</string>
      </property>
     </widget>
    </item>
@@ -43,7 +43,7 @@
     </widget>
    </item>
    <item>
-    <widget class="QPushButton" name="pushButton_2">
+    <widget class="QPushButton" name="genreListButton">
      <property name="text">
       <string>Lista gatunków</string>
      </property>

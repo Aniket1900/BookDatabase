@@ -1,6 +1,6 @@
 from PyQt5 import uic
 from PyQt5.QtWidgets import QWidget
-from PyQt5.QtGui import QStandardItemModel
+from PyQt5.QtGui import QStandardItemModel, QStandardItem
 from Models.PrologObjects import Genres
 
 
@@ -15,7 +15,8 @@ class ListGenreWindow(QWidget):
         genres = Genres()
 
         for genre in genres:
-            genre.setCheckable(True)
-            model.appendRow(genre)
+            item = QStandardItem(genre.Name())
+            item.setCheckable(True)
+            model.appendRow(item)
 
         self.ui.genreListView.setModel(model)
