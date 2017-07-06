@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>mainUi</class>
+ <widget class="QWidget" name="mainUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>335</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>BookDatabase</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QPushButton" name="addAuthorButton">
+     <property name="text">
+      <string>Dodaj autora</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addGenreButton">
+     <property name="text">
+      <string>Dodaj gatunek</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addBookButton">
+     <property name="text">
+      <string>Dodaj książkę</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="authorListButton">
+     <property name="text">
+      <string>Lista autorów</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="genreListButton">
+     <property name="text">
+      <string>Lista gatunków</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="bookListButton">
+     <property name="text">
+      <string>Lista książek</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="closeButton">
+     <property name="text">
+      <string>Zamknij</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>closeButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mainUi</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>209</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>330</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addAuthorUi</class>
+ <widget class="QWidget" name="addAuthorUi">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>338</width>
+    <height>174</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dodaj autora</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="labelNameAuthor">
+     <property name="text">
+      <string>Imie</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditNameAuthor</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditNameAuthor"/>
+   </item>
+   <item>
+    <widget class="QLabel" name="labelSurnameAuthor">
+     <property name="text">
+      <string>Nazwisko</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEditSurnameAuthor</cstring>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="lineEditSurnameAuthor"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="addAuthorButton">
+     <property name="text">
+      <string>Dodaj autora</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
